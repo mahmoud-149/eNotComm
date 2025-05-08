@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express()
-const DB = process.env.DB;
+//const DB = process.env.DB;
 
 
 app.use(cors())
