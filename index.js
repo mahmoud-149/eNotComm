@@ -8,8 +8,10 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/',(req, res) => {
-console.log("hello");
-
+return res.status(400).json({
+  status: 400,
+  data: { data: null, message: "done" },
+});
 });
 
 
