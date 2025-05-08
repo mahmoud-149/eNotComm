@@ -8,7 +8,9 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/',(req, res) => {
-return res.status(200).json({done});
+return res.status(200).json({
+    message:"done"
+});
 });
 
 
