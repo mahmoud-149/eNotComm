@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+
 require("dotenv").config();
 const app = express();
 const { products_routes } = require("./routes/productRoutes");
@@ -19,6 +20,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/products", products_routes);
+
+
+
 
 app.use((req, res) => {
   res.status(500).json({
