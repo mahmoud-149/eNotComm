@@ -13,7 +13,8 @@ console.log("hello");
 });
 
 
-const PORT=3000;
-app.listen(PORT,()=>{
-    console.log("server running");    
-})
+//const PORT=3000;
+//app.listen(PORT,()=>{
+ //   console.log("server running");    
+//})
+module.exports = app;
