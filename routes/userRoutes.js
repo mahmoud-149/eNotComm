@@ -19,14 +19,6 @@ router
   .patch(check_role, updateUser)
   .delete(check_role, deleteUser);
 
-// router.route("/update").put(check_role, updateUser);
-
-// router.route("/delete").put(check_role, deleteUser);
-
-// router.route("/signup").post(signup);
-
-// router.route("/login").post(login);
-
 module.exports = {
   users_routes: router,
 };
