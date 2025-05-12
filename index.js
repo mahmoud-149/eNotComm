@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 const { products_routes } = require("./routes/productRoutes");
+const { users_routes } = require("./routes/userRoutes");
 const mongoose = require("mongoose");
 
 const DB = process.env.DB;
@@ -20,9 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/products", products_routes);
-
-
-
+app.use("/api/users", users_routes);
 
 app.use((req, res) => {
   res.status(500).json({
@@ -31,8 +30,8 @@ app.use((req, res) => {
   });
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log("server running");
-});
-// module.exports = app;
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log("server running");
+// });
+module.exports = app;
