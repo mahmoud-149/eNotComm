@@ -1,3 +1,4 @@
+
 const check_role = async (req, res, next) => {
   const token = req.headers["authorization"] || req.headers["Authorization"];
   const role = token.split(" ")[1];
@@ -14,3 +15,4 @@ const check_role = async (req, res, next) => {
 };
 
 module.exports = { check_role };
+
